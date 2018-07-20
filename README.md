@@ -30,6 +30,6 @@ Run the program each time the proxy interface files change to generate new files
 
 ```c#
 // This code uses the generated interceptor.
-IUserProxy proxy = channel.RealmProxy.Services.GetCalleeProxy<UserProxy>();
-proxy.CallSomeMethod();
+IArgumentsService proxy = channel.RealmProxy.Services.GetCalleeProxy<ArgumentsServiceProxy>();
+int seven = proxy.Add2(3, 4);
 ```
