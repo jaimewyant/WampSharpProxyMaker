@@ -25,3 +25,11 @@ the string MOD:.  Below is the first one in the source code.
 ```
 
 Run the program each time the proxy interface files change to generate new files.
+
+## How to use the proxy classes
+
+```c#
+// This code uses the generated interceptor.
+var proxy = new UserProxy(wampChannel.RealmProxy, new MyInterceptor());
+proxy.CallSomeMethod();
+```
