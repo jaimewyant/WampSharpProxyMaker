@@ -30,6 +30,6 @@ Run the program each time the proxy interface files change to generate new files
 
 ```c#
 // This code uses the generated interceptor.
-var proxy = new UserProxy(wampChannel.RealmProxy, new MyInterceptor());
+IUserProxy proxy = channel.RealmProxy.Services.GetCalleeProxy<UserProxy>();
 proxy.CallSomeMethod();
 ```
